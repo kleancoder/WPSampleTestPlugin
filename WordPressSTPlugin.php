@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @package sampletest
+ * @package WordPressSTPlugin
  */
 
  /*
@@ -36,16 +36,13 @@
         flush_rewrite_rules();
     }
     
-    function uninstall() {
-        
-    }
     
     function custom_post_type() {
      register_post_type('book', ['public' => true, 'label' => 'Books']);
     }
  }
  
- if (class_exists('SampleTest')) {
+ if (class_exists('WordPressSTPlugin')) {
      $wordPressSTPlugin = new WordPressSTPlugin();
  }
  
