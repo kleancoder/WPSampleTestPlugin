@@ -36,9 +36,13 @@
         flush_rewrite_rules();
     }
     
-    
     function custom_post_type() {
      register_post_type('book', ['public' => true, 'label' => 'Books']);
+    }
+    
+    function enqueue() {
+     // enqueue all out scripts
+     wp_enqueue_style('mypluginstyle', plugins_url('/assets/mystyle.css',__FILE__));
     }
  }
  
